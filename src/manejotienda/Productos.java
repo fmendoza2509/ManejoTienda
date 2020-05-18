@@ -29,4 +29,66 @@ public class Productos implements InterfaceProducto{
             productos[i] = pro.productos[i];
         }
     }
+    /*************************************************
+     *Método para imprimir los datos de los conjuntos*
+     *************************************************/
+    public void Imprimir(){
+        for(int i=0;i<productos.length;i++){
+            System.out.println(productos[i].toString());
+        }
+    }
+    /***********************************************
+     *Método para verificar si la tienda esta vacia*
+     ***********************************************/
+    public boolean EstaVacio(){
+        for(int i=0;i<productos.length;i++){
+            if(productos[i] != null) return false;
+        }
+        return true;
+    }
+    public int Tamano(){
+        int Tam = 0;
+        for(int i=0;i<productos.length;i++){
+            if(productos[i] != null) Tam++;
+        }
+        return Tam;
+    }
+    public void Vaciar(){
+        for(int i=0;i<productos.length;i++){
+            prductos[i]=null;
+        }
+    }
+    public boolean Contiene(Object elemento){
+        if(!EstaVacio()){
+            for(int i=0;i<productos.length;i++){
+                if(elemento.equals(productos[i])){
+                    return true;
+                }
+            }
+        }
+        return false;
+    }
+    public boolean Eliminar(Object elemento){
+        if(!EstaVacio()){
+            for(int i=0;i<productos.length;i++){
+                if(elemento.equals(productos[i])){
+                    productis[i]=null;
+                    return true;
+                }
+            }
+        }
+        return false;
+    }
+    public Agregar(Object elemento){
+        if(!Contiene(elemento)){
+            for(int i=0;i<productos.length;i++){
+                if(productos[i]==null){
+                    productos[i]=elemento;
+                    return;
+                }
+            }
+        }else {
+            throw new IllegalArgumentException("El producto ya existe");
+        }
+    }
 }
