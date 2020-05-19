@@ -55,7 +55,7 @@ public class Productos implements InterfaceProducto{
     }
     public void Vaciar(){
         for(int i=0;i<productos.length;i++){
-            prductos[i]=null;
+            productos[i]=null;
         }
     }
     public boolean Contiene(Object elemento){
@@ -68,18 +68,17 @@ public class Productos implements InterfaceProducto{
         }
         return false;
     }
-    public boolean Eliminar(Object elemento){
+    public void Eliminar(Object elemento){
         if(!EstaVacio()){
             for(int i=0;i<productos.length;i++){
                 if(elemento.equals(productos[i])){
-                    productis[i]=null;
-                    return true;
+                    productos[i]=null;
+                    return;
                 }
             }
         }
-        return false;
     }
-    public Agregar(Object elemento){
+    public void Agregar(Object elemento){
         if(!Contiene(elemento)){
             for(int i=0;i<productos.length;i++){
                 if(productos[i]==null){
@@ -90,5 +89,20 @@ public class Productos implements InterfaceProducto{
         }else {
             throw new IllegalArgumentException("El producto ya existe");
         }
+    }
+
+    @Override
+    public void Buscar(Object elemento) {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
+
+    @Override
+    public void Editar(Object elemento) {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
+
+    @Override
+    public void Vender(Object elemento) {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
 }

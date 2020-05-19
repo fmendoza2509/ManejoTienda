@@ -23,15 +23,15 @@ public interface InterfaceProducto {
    /********************************
     * Método para eliminar producto*
     ********************************/
-   public boolean Eliminar(Object elemento);//Requerimiento funcional
+   public void Eliminar(Object elemento);//Requerimiento funcional
    /*********************************************
     *Metodo para buscar un producto en la tienda*
     *********************************************/
-   public boolean Buscar(Object elemento);//Requerimiento funcional
+   public void Buscar(Object elemento);//Requerimiento funcional
    /***************************************
     * Método para actualizar los productos*
     ***************************************/
-   public boolean Editar(Object elemento);//Requerimiento funcional
+   public void Editar(Object elemento);//Requerimiento funcional
    /*************************
     * Método vender producto*
     *************************/
