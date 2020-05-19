@@ -1,22 +1,16 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
-
 package manejotienda;
-
-/**
- *
- * @author Franklin
- */
 public class ManejoTienda {
-
-    /**
-     * @param args the command line arguments
-     */
     public static void main(String[] args) {
-        // TODO code application logic here
+        Tienda t1 = new Tienda("001","ricas","galletas ricas de nestle",6);
+        Tienda t2 = new Tienda("002","maria","galletas maria de nabisco",12);
+        
+        Productos tienda = new Productos(2);
+        
+        tienda.Agregar(t1);
+        tienda.Agregar(t2);
+        
+        System.out.println("los productos de la tienda son");
+        tienda.Imprimir();
     }
 
 }

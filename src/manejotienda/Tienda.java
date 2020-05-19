@@ -47,5 +47,7 @@ public class Tienda {
     public int getCantidad() {
         return cantidad;
     }
-    
+    public String toString(){
+        return getCodigo() +" - "+getNombre()+" - "+getDescripcion()+" - "+getCantidad();
+    }
 }
