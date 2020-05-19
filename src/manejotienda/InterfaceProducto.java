@@ -1,5 +1,5 @@
 package manejotienda;
-public class InterfaceProducto {
+public interface InterfaceProducto {
     /*********************************************
      * Método determinar si la tienda esta vacia *
      * retorna un true, caso contrario retorna   *
@@ -27,13 +27,13 @@ public class InterfaceProducto {
    /*********************************************
     *Metodo para buscar un producto en la tienda*
     *********************************************/
-   public boolean Buscar(String codigo);//Requerimiento funcional
+   public boolean Buscar(Object elemento);//Requerimiento funcional
    /***************************************
     * Método para actualizar los productos*
     ***************************************/
-   public boolean Editar(String cod, String nomb, String desc, int cant);//Requerimiento funcional
+   public boolean Editar(Object elemento);//Requerimiento funcional
    /*************************
     * Método vender producto*
     *************************/
-   public void Vender(String cod, String nomb, String desc, int cant);//Requerimiento funcional
+   public void Vender(Object elemento);//Requerimiento funcional
 }
