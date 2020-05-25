@@ -19,7 +19,7 @@ public interface InterfaceProducto {
    /**************************************
     * Método Agregar producto a la tienda*
     **************************************/
-   public void Agregar(Object elemento);//Requerimiento funcional
+   public boolean Agregar(Object elemento);//Requerimiento funcional
    /********************************
     * Método para eliminar producto*
     ********************************/

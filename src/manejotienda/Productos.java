@@ -1,5 +1,6 @@
 package manejotienda;
 public class Productos implements InterfaceProducto{
+
     private Object[] productos;
     /************************************************
      * Constructor por defecto, crea un vector de 20*
@@ -78,17 +79,19 @@ public class Productos implements InterfaceProducto{
             }
         }
     }
-    public void Agregar(Object elemento){
+    public boolean Agregar(Object elemento){
         if(!Contiene(elemento)){
             for(int i=0;i<productos.length;i++){
                 if(productos[i]==null){
                     productos[i]=elemento;
-                    return;
+                    return true;
                 }
             }
         }else {
             throw new IllegalArgumentException("El producto ya existe");
+            
         }
+        return false;
     }
 
     @Override
